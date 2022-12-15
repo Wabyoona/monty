@@ -43,16 +43,11 @@ int main(int argc, char *argv[])
 								var.stack_len = 0;
 
 									if (argc != 2)
-
-											{
-
-														dprintf(STDOUT_FILENO, "USAGE: monty file\n");
-
-																exit(EXIT_FAILURE);
-
-																	}
-
-										fs = fopen(argv[1], "r");
+{
+dprintf(STDOUT_FILENO, "USAGE: monty file\n");
+exit(EXIT_FAILURE);
+}
+fs = fopen(argv[1], "r");
 if (fs == NULL)
 {
 dprintf(STDOUT_FILENO, "Error: Can't open file %s\n", argv[1]);
